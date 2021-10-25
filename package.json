@@ -47,8 +47,9 @@
   "scripts": {
     "start": "webpack serve --open --env=development",
     "build": "webpack serve --env=production",
-    "lint": "eslint --ext js ./src/*.js",
-    "stylelint": "stylelint ./src/*.js",
+    "lint": "eslint --fix --ext js src && stylelint --fix src",
+    "lint:eslint": "eslint --fix --ext js src",
+    "lint:stylelint": "stylelint --fix src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }
